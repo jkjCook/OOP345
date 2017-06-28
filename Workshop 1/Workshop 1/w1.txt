@@ -1,0 +1,54 @@
+Script started on Thu 11 May 2017 03:02:53 PM EDT
+jcook17@matrix:~/semester3/OOP345/workshop1> exitg++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pwhoami[2Pexitwhoami
+jcook17
+jcook17@matrix:~/semester3/OOP345/workshop1> whoami[2Pexitg++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+//Justin Cook
+#include <iostream>
+#include "process.h"
+#include "CString.h"
+
+using namespace std;
+
+
+int main(int argc, char* argv[]) {
+	int ret = 0;
+
+   cout << "Command Line: ";
+	for (int i = 0; i < argc; i++) {
+		cout << argv[i];
+	}
+   cout << endl;
+
+   if (argc == 1) {
+      cout << "Insufficient number of arguments (min 1)" << endl;
+      ret = 1;
+   }
+   else {
+      cout << "Maximum number of characters stored : " << MAX << endl;
+      for (int args = 1; args < argc; args++) {
+         process(argv[args]);
+      }
+   }
+
+	return ret;
+}
+
+jcook17@matrix:~/semester3/OOP345/workshop1> cat w1.cpp[4Pwhoami[2Pexitg++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp
+jcook17@matrix:~/semester3/OOP345/workshop1> g++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pwhoami[2Pexitg++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pwhoami[2Pexit[2Pw1 oop345 btp305
+Command Line: w1oop345btp305
+Maximum number of characters stored : 3
+0: oop
+1: btp
+jcook17@matrix:~/semester3/OOP345/workshop1> w1 oop345 btp305g++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pwhoami[2Pexitg++ -std=c++0x -o w1 w1.cpp CString.cppp process.cpp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat w1.cpp[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pwhoami[2Pexit[2Pw1
+Command Line: w1
+Insufficient number of arguments (min 1)
+jcook17@matrix:~/semester3/OOP345/workshop1> w1[K[Kexit
+exit
+
+Script done on Thu 11 May 2017 03:03:36 PM EDT

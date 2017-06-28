@@ -1,0 +1,5 @@
+﻿  w4.cpp
+c:\users\justin\desktop\school\semester 3\oo345\workshop4\workshop4\w4.cpp(24): warning C4101: 'width': unreferenced local variable
+c:\users\justin\desktop\school\semester 3\oo345\workshop4\workshop4\w4.cpp(13): warning C4018: '<': signed/unsigned mismatch
+  c:\users\justin\desktop\school\semester 3\oo345\workshop4\workshop4\w4.cpp(47): note: see reference to function template instantiation 'void display<std::string,double,5>(const std::string &,const KVList<std::string,double,5> &,int)' being compiled
+  Workshop4.vcxproj -> C:\Users\Justin\Desktop\School\Semester 3\OO345\Workshop4\Debug\Workshop4.exe

@@ -1,0 +1,8 @@
+﻿  Stations.cpp
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(36): warning C4018: '<': signed/unsigned mismatch
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(67): warning C4018: '<': signed/unsigned mismatch
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(86): warning C4018: '<': signed/unsigned mismatch
+c:\users\justin\desktop\school\semester 3\oo345\workshop 2\workshop 2\stations.cpp(100): warning C4018: '<': signed/unsigned mismatch
+  Workshop 2.vcxproj -> C:\Users\Justin\Desktop\School\Semester 3\OO345\Workshop 2\Debug\Workshop 2.exe
