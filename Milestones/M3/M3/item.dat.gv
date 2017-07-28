@@ -1,0 +1,11 @@
+digraph item {
+"I5"->"Install CPU"->"Remove CPU"->"300"->"Intel I5 Central Processing Unit" [color=green];
+"I7"->"Install CPU"->"Remove CPU"->"400"->"Intel I7 Central Processing Unit" [color=green];
+"A12"->"Install CPU"->"Remove CPU"->"500"->"AMD A12 APU ~ Accelerated Processing Unit (CPU+GPU in same chip)" [color=green];
+"DDR 266"->"Install Memory"->"Remove Memory"->"125"->"Samsung DDR 266 Memory Stick" [color=green];
+"DDR 400"->"Install Memory"->"Remove Memory"->"940"->"Samsung DDR 400 Memory Stick" [color=green];
+"Geforce 750M"->"Install GPU"->"Remove GPU"->"395"->"Nvidia Geforce 750M GPU" [color=green];
+"Nano"->"Install GPU"->"Remove GPU"->"30"->"AMD Nano GPU" [color=green];
+"Power Supply 200 Watt"->"Install Power Supply"->"Remove Power Supply"->"1100" [color=green];
+"Power Supply 300 Watt"->"Install Power Supply"->"Remove Power Supply"->"9100" [color=green];
+}
