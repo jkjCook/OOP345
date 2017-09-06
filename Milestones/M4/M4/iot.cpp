@@ -11,29 +11,26 @@ int main(int argc, char** argv) {
    char* order = argv[2];
    char* item = argv[3];
    char delim = argv[4][0];
-
    vector<vector<string>> csvData;
-   csvData = csvRead(order, delim);
-
-   csvData = csvRead(order, delim);
-   OrderManager O(csvData);
-   O.orderManagerPrint();
-   O.orderManagerGraph(order);
 
    csvData = csvRead(task, delim);
-
    TaskManager T(csvData);
+   T.validate();
    T.taskManagerPrint();
    T.taskManagerGraph(task);
-
+   
    csvData = csvRead(item, delim);
-
    ItemManager I(csvData);
+   I.validate(T);
    I.itemManagerPrint();
    I.itemManagerGraph(item);
-
-
-
+   
+   csvData = csvRead(order, delim);
+   OrderManager O(csvData);
+   O.validate(I);
+   O.orderManagerPrint();
+   O.orderManagerGraph(order);
+  
 #ifdef __unix
    string dot = "dot"
 #else 

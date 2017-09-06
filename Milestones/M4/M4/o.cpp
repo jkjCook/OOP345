@@ -1,8 +1,8 @@
 //Justin Cook 
 //Milestone 2
 #include "o.h"
-
-
+#include "i.h"
+#include "util.h"
 using namespace std;
 
 
@@ -81,4 +81,22 @@ using namespace std;
          cout << "file not opened" << endl;
       }
       file.close();
+   }
+   void OrderManager::validate(ItemManager& im) {
+      bool flag = false;
+      int trueCount = 0;
+
+      for (int i = 0; i < orderList.size(); i++) {
+         for (int p = 0; p < orderList[i].size(); p++) {
+            for (int j = 0; j < im.size(); j++) {
+               if (orderList[i].item(p) == im.name(j))
+                  flag = true;
+            }
+            if (flag == false) {
+               cout << "Order reference error on item " << p << " of order " << i << ": " << orderList[i].item(p) << endl;
+               orderList[i].eraseItem(p);
+            }
+            flag = false;
+         }
+      }
    }

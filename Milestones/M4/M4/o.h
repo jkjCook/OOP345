@@ -1,15 +1,10 @@
 #pragma once
 //Justin Cook 
 //Milestone 2
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <stdlib.h>
 #include "util.h"
+#include "i.h"
 
 using namespace std;
-
 
 class Order {
    string custName;
@@ -21,6 +16,9 @@ public:
 
    void orderPrint();
    void orderGraph(ofstream& of);
+   size_t size() { return items.size(); }
+   string item(int pos) { return items[pos]; }
+   void eraseItem(int pos) { items.erase(items.begin() + pos); }
 };
 
 
@@ -32,4 +30,5 @@ public:
 
    void orderManagerPrint();
    void orderManagerGraph(const char* filename);
+   void validate(ItemManager& im);
 };

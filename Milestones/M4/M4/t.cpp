@@ -1,7 +1,7 @@
 //Justin Cook 
 //Milestone 4
-
 #include "t.h"
+#include "util.h"
 using namespace std;
 
 
@@ -85,7 +85,36 @@ using namespace std;
       }
       file.close();
    }
+   void TaskManager::validate() {
+      bool flagPass = false;
+      bool flagFail = false;
+      for (int i = 0; i < taskList.size(); i++) {
+         for (int j = 0; j < taskList.size(); j++) {
+            if (taskList[i].pass() == "")
+               flagPass = true;
+            if (taskList[i].pass() == taskList[j].name())
+               flagPass = true;
+            if (taskList[i].fail() != "") {
+               if (taskList[i].fail() == taskList[j].name())
+                  flagFail = true;
+            }
+         }
+         if (taskList[i].fail() != "") {
+            if (flagPass == false || flagFail == false) {
+               cout << "Task: " << taskList[i].fail() << " - Fail" << endl;
+               taskList.erase(taskList.begin() + i);
+               flagPass = true; flagFail = true;   //Set the flags to true so there isn't two deletions
+            }
+         }
+         if (flagPass == false) {
+            cout << "Task: " << taskList[i].pass() << " - Pass" << endl;
+            taskList.erase(taskList.begin() + i);
+         }
+
+         flagPass = false; flagFail = false;       //Reset the flags for the beginning of the loop
+      }
+   }
 
 
 
-
+   

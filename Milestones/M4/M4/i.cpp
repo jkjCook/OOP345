@@ -1,4 +1,5 @@
 #include "i.h"
+#include "t.h"
 
 using namespace std;
 
@@ -69,4 +70,26 @@ void ItemManager::itemManagerGraph(const char* filename) {
       cout << "file not opened" << endl;
    }
    file.close();
+}
+void ItemManager::validate(TaskManager& tm) {
+   bool flagInstall = false;
+   bool flagRemove = false;
+   for (int index = 0; index < itemList.size(); index++) {
+      
+      for (int inner = 0; inner < tm.size(); inner++) {
+         if (itemList[index].installer() == tm.name(inner)) {
+            flagInstall = true;
+         }
+         if (itemList[index].remover() == tm.name(inner)) {
+            flagRemove = true;
+         }
+      }
+
+      if (flagInstall == false || flagRemove == false) {
+         cout << "Item reference error on item " << index << ": " << itemList[index].name() << endl;
+         itemList.erase(itemList.begin() + index);
+      }
+
+      flagInstall = false; flagRemove = false;
+   }
 }

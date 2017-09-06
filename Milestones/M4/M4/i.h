@@ -1,11 +1,8 @@
 #pragma once
 //Justin Cook 
 //Milestone 3
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <stdlib.h>
+#include "util.h"
+#include "t.h"
 
 class Item {
    std::string itemName;
@@ -19,6 +16,10 @@ public:
 
    void itemPrint();
    void itemGraph(std::ofstream& of);
+   std::string name() { return itemName; };
+   std::string installer() { return installerTask; };
+   std::string remover() { return removerTask; };
+
 };
 
 
@@ -30,4 +31,7 @@ public:
 
    void itemManagerPrint();
    void itemManagerGraph(const char* filename);
+   void validate(TaskManager& tm);
+   size_t size() { return itemList.size(); }
+   std::string name(int pos) { return itemList[pos].name(); }
 };

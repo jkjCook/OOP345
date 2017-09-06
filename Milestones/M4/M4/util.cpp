@@ -119,7 +119,3 @@ bool prodNameValid(std::string& name) {
    }
    return proper;
 }
-
-bool validateTask(const Task& task) {
-
-}
